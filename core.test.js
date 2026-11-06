@@ -1,0 +1,4 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {safeUrl,validateBackup,flatten} from './core.js';
+test('reject executable and local URLs',()=>{for(const x of ['javascript:alert(1)','data:text/html,x','file:///secret','bad'])assert.equal(safeUrl(x),null);assert.equal(safeUrl('https://example.com'),'https://example.com/')});
+test('validate backup and strip unknown fields',()=>{const s=validateBackup({version:1,links:[{name:'a',url:'https://example.com',category:'c',secret:'x'}],settings:{theme:'bad'}});assert.equal(s.settings.theme,'light');assert.equal(s.links[0].secret,undefined);assert.throws(()=>validateBackup({version:1,links:[{name:'x',url:'javascript:x',category:'a'}]}))});
+test('flatten bookmark folders preserving ids and exact duplicates',()=>{assert.deepEqual(flatten([{title:'tools',children:[{id:'1',title:'A',url:'https://example.com'},{id:'2',title:'B',url:'https://example.com'}]}]).map(x=>x.id),['1','2'])});
