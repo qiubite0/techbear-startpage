@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "科技熊 DIY 导航",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "本地优先的可自定义浏览器主页",
   "chrome_url_overrides": {
     "newtab": "index.html"
