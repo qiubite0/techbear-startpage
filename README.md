@@ -30,3 +30,9 @@ Node.js 20+；`npm test`、`npm run check`。无需 npm install。修改 HTML/CS
 交互思路参考 [Bonjourr](https://github.com/victrme/Bonjourr) 的本地优先体验、[Tabliss](https://github.com/joelshepherd/tabliss) 的自定义布局、[nightTab](https://github.com/zombieFox/nightTab) 的分组与备份；信息架构参考 Tbox / AIGC.cn 工具导航。独立实现，未复制上述项目代码、图标或其他资源。本仓库不包含作者私人收藏及个人 Logo，品牌名称可在设置中修改。
 
 MIT License。
+
+## 实际效果
+
+![公开示例页面实际渲染](docs/screenshots/home-light.png)
+
+浏览器打印渲染生成，仅含三个公开示例；不是用户私人主页截图。
